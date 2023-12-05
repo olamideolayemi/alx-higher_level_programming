@@ -3,7 +3,7 @@ def multiple_returns(sentence):
     if not sentence:
         sentence = None
     if sentence:
-        sentence_len = len(sentence)
+        sen_len = len(sentence)
     else:
-        sentense_len = 0
-    return (sentence_len, sentence if not sentence else sentence[:1])
+        sen_len = 0
+    return sen_len, sentence if not sentence else sentence[:1]
