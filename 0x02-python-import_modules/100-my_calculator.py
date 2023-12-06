@@ -8,8 +8,8 @@ if __name__ == "__main__":
         exit(1)
 
     op = argv[2]
-    a = int(sys.argv[1])
-    b = int(sys.argv[3])
+    a = int(argv[1])
+    b = int(argv[3])
 
     ops = {"+": add, "-": sub, "*": mul, "/": div}
 
