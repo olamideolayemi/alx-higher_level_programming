@@ -17,18 +17,18 @@ tested:
 
 	Case 1: When string type is supplied
 	-------------------------------------
-	>>> text_indentation("I love frontend! It is way more fun.")
-	Frontend is cool!
+	>>> text_indentation("Temi is here? i can't believe it sha.")
+	Temi is here?
 	<BLANKLINE>
-	It is way more fun.
+	i can't believe it sha.
 	<BLANKLINE>
 
 	Case 2: When string is wrapped in bracket
 	--------------------------------------------
-	>>> text_indentation(("Python ? What do you think?))
-	Python ?
+	>>> text_indentation(("Hello ? i'm here now."))
+	Hello ?
 	<BLANKLINE>
-	What do you think?
+	i'm here now.
 	<BLANKLINE>
 
 	Case 3: When only the punctuations are in a string with space
@@ -43,7 +43,7 @@ tested:
 	
 	Case 4: When wrong data type is supplied
 	----------------------------------------
-	>>> text_indentation(["Hello: My Nickname is Krane."])
+	>>> text_indentation(["Hello: may name is tope."])
 	Traceback (most recent call last):
 	TypeError: text must be a string
 
