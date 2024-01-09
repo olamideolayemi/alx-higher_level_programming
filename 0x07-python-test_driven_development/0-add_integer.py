@@ -1,20 +1,22 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """
-This modules consist of a function that adds two (2) integers.
-Any other data type is considered invalid.
+This module conatins the function for strictly adding 2 numbers
+of data type int or floats together, any other data type is regarded
+as invalid with exceptions being raise signifying what caused the error.
 
 """
+
 
 def add_integer(a, b=98):
-    """Returns the sum of two integers of data type int or float as one
+    """This function returns the summation of 2 numbers of data type
+    int or float together
 
     Args:
-        a: First number
-        b: Second Number
+        a: The first number
+        b: The second number
 
     Return: a + b
     """
-
     data = (int, float)
 
     if not isinstance(a, data):
