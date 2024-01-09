@@ -1,59 +1,29 @@
-The module `3-say_my_name`
-==========================
+#!/usr/bin/python3
 
-The function `say_my_name`
---------------------------
-This function prints `My name is <first name <last name>`.
-The first and last name are the argument supplied to the
-function, which are mandatory to be a string type.
+"""
+This module contains function that prints the name(first and last name)
+of the argument supplied to it. The data type of both arguments have to be
+ a string and if otherwise, it throws and error.
 
-To use this function, you need to first import it:
-	>>> say_my_name = __import__('3-say_my_name').say_my_name
+ """
 
-After importing, you can go ahead to use the function by supplying your
-arguments.
 
-Below are the few cases on how to use the function:
+def say_my_name(first_name, last_name=""):
+    """This function prints the name(first and last) supplied
+    to it.
 
-	Case 1: Both arguments are strings
-	------------------------------------
-	>>> say_my_name("Olamide", "Olayemi")
-	My name is Olamide Olayemi
+    Args:
+        first_name: The first string argument
+        last_name: The second optional argument
 
-	Case 2: Last name not supplied
-	------------------------------
-	>>> say_my_name("Bob")
-	My name is Bob
+    Raise:
+        TypeError: first_name must be a string or last_name must be a string
 
-	Case 3: First name not supplied
-	-------------------------------
-	>>> say_my_name("", "Olayemi")
-	My name is Olayemi
+    """
 
-	Case 4: First name or Last name is an int
-	-----------------------------
-	>>> say_my_name(26, "Olayemi")
-	Traceback (most recent call last):
-	TypeError: first_name must be a string
-
-	>>> say_my_name("Ola", 66)
-	Traceback (most recent call last):
-	TypeError: last_name must be a string
-
-	Case 5: Both arguments with wrong type
-	--------------------------------------
-	>>> say_my_name((26), ['Olayemi'])
-	Traceback (most recent call last):
-	TypeError: first_name must be a string
-
-	Case 6: Both arguments are none type
-	--------------------------------------
-	>>> say_my_name(None, None)
-	Traceback (most recent call last):
-	TypeError: first_name must be a string
-
-	Case 7: Last argument is None
-	--------------------------------------
-	>>> say_my_name("Olamide", None)
-	Traceback (most recent call last):
-	TypeError: last_name must be a string
+    if not isinstance(first_name, str):
+        raise TypeError("first_name must be a string")
+    elif not isinstance(last_name, str):
+        raise TypeError("last_name must be a string")
+    else:
+        print("My name is {} {}".format(first_name.strip(), last_name.strip()))
