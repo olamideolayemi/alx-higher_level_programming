@@ -1,40 +1,41 @@
 #!/usr/bin/python3
 
 """
-This module consists of a function that divides all elements of a matrix whose
-row contains int or float data type with an int or float divider
+This module divides all elements of a matrix whose row
+contains int or float data type with an int or float divider
 """
 
+
 def matrix_divided(matrix, div):
-    """
-    This functions divides integers in a matrix with an int deivider
+    """This function divides integers in a matrix with an integer
+    divider
 
     Args:
-        matrix: must be a list of lists of integers or floats
-        div: must be a number (integer or float)
+        matrix: A list of lists containing integers
+        div: An integer used in dividing the elements of a list
 
     Raise:
         TypeError: matrix must be a matrix (list of lists) of integers/floats
-        TyoeError: Each row of the matrix must have the same size
+        TypeError: Each row of the matrix must have the same size
         TypeError: div must be a number
         ZeroDivisionError: division by zero
 
-    Return: Returns a new matrix
+    Return: A new list containing the result of each division, rounded
+    to 2 decimal places
     """
-
     data = (int, float)
     err = "matrix must be a matrix (list of lists) of integers/floats"
     err2 = "Each row of the matrix must have the same size"
 
-    if div == float("int"):
+    if div == float("inf"):
         return [[0.0] * len(row) for row in matrix]
 
-    if isinstance(div, data) and div !=0 and isinstance(matrix, list) 
-    \ and len(matrix) != 0:
-        
+    if isinstance(div, data) and div != 0 and isinstance(matrix, list) and \
+            len(matrix) != 0:
+
         length = len(matrix[0])
         for row in matrix:
-            if not isintance(row, list):
+            if not isinstance(row, list):
                 raise TypeError(err)
             else:
                 if len(row) != length:
