@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 
 """
+Module 100-matrix-mul
 Ths module contains functions that multiply 2 matrices together
 """
 
 
 def chk_row(row, strn):
-    """
-    This function checks individual rows in each matrix for errors
-
+    """This function checks individual rows in each matrix
+    for errors
     Args:
         row: Individual row of each matrix
         strn: Name of the matrix in which the row failed
-    
     Raises:
         TypeError: if row contains data type other than float and int
         ValueError: if row is empty
@@ -27,9 +26,7 @@ def chk_row(row, strn):
 
 
 def deep_chk(mat, strn):
-    """
-    This function checks individual matrix for errors
-    
+    """This function checks individual matrix for errors
     Args:
         mat: Matrix to check
         strn: Name of the failed matrix
@@ -54,8 +51,7 @@ def deep_chk(mat, strn):
 
 
 def matrix_mul(m_a, m_b):
-    """
-    This function multiply 2 matrices and return a new list
+    """This function multiply 2 matrices and return a new list
     or matrix containing the result of the product of the 2 matrices
 
     Args:
