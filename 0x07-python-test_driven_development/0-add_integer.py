@@ -1,11 +1,12 @@
 #!/bin/usr/python3
 """
-This modules consist of a function that adds two (2) integers. Any other data type is considered invalid.
+This modules consist of a function that adds two (2) integers.
+Any other data type is considered invalid.
+
 """
 
 def add_integer(a, b=98):
-    """
-    Returns the sum of two integers of data type int or float as one.
+    """Returns the sum of two integers of data type int or float as one
 
     Args:
         a: First number
